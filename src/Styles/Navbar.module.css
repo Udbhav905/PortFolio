@@ -1,24 +1,6 @@
-:root {
-  /* Light theme colors */
-  --bg-gradient: linear-gradient(135deg, #e0f2fe, #f0f9ff);
-  --bg-color: #ffffff;
-  --text-color: #0f172a;
-  --hover-bg: #bae6fd;
-  --hover-text: #0284c7;
-  --logo-border: #bae6fd;
-  --box-shadow: rgba(0, 0, 0, 0.05);
-}
 
-.dark {
-  /* Dark theme overrides */
-  --bg-gradient: linear-gradient(135deg, #0f172a, #1e293b);
-  --bg-color: #0f172a;
-  --text-color: #f1f5f9;
-  --hover-bg: #0284c7;
-  --hover-text: #bae6fd;
-  --logo-border: #0284c7;
-  --box-shadow: rgba(0, 0, 0, 0.8);
-}
+
+
 
 .Navbar {
   display: flex;
