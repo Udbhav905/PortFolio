@@ -1,69 +1,110 @@
 .certificateSection {
-  padding: 4rem 2rem;
+  padding: 5rem 2rem;
   background: url('https://www.svgbackgrounds.com/wp-content/uploads/2021/05/nature-green.svg') no-repeat center center;
   background-size: cover;
   animation: fadeIn 1s ease-in-out;
+  backdrop-filter: blur(2px);
 }
 
 .title {
   text-align: center;
-  font-size: 2.5rem;
-  margin-bottom: 2rem;
-  color: #1b4332;
-  background: linear-gradient(90deg, #38b000, #90e0ef);
+  font-size: 2.8rem;
+  margin-bottom: 3rem;
+  font-weight: 800;
+  background: linear-gradient(90deg, #38b000, #60d394, #90e0ef);
+  background-size: 200% auto;
   -webkit-background-clip: text;
   color: transparent;
+  animation: gradientShift 3s infinite alternate;
+  letter-spacing: 1px;
+}
+
+@keyframes gradientShift {
+  0% {
+    background-position: 0% center;
+  }
+  100% {
+    background-position: 100% center;
+  }
 }
 
 .grid {
   display: grid;
-  gap: 2rem;
+  gap: 2.5rem;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  max-width: 1000px;
+  max-width: 1100px;
   margin: 0 auto;
 }
 
 .card {
-  background-color: rgba(255, 255, 255, 0.9);
-  border-radius: 16px;
-  padding: 1.5rem;
-  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.96), rgba(240, 255, 240, 0.9));
+  border-radius: 20px;
+  padding: 2rem;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
   animation: slideUp 0.8s ease forwards;
+  position: relative;
+  overflow: hidden;
+}
+
+.card::before {
+  content: '';
+  position: absolute;
+  top: -30%;
+  left: -30%;
+  width: 160%;
+  height: 160%;
+  background: radial-gradient(circle, rgba(56, 176, 0, 0.1), transparent 70%);
+  transform: rotate(45deg);
+  z-index: 0;
 }
 
 .card:hover {
-  transform: translateY(-8px) scale(1.02);
-  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+  transform: translateY(-10px) scale(1.03);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
 }
 
 .card h3 {
   margin-top: 0;
   color: #1b4332;
+  font-size: 1.4rem;
+  z-index: 1;
+  position: relative;
 }
 
 .card p {
-  color: #333;
-  margin: 0.5rem 0;
+  color: #444;
+  margin: 0.6rem 0;
+  font-size: 0.95rem;
+  z-index: 1;
+  position: relative;
 }
 
 .card a {
   display: inline-block;
   margin-top: 1rem;
   text-decoration: none;
-  color: #38b000;
   font-weight: bold;
-  transition: color 0.3s;
+  color: #2d6a4f;
+  background: linear-gradient(to right, #38b000, #90e0ef);
+  padding: 0.5rem 1rem;
+  border-radius: 30px;
+  transition: background 0.3s, transform 0.3s;
+  z-index: 1;
+  position: relative;
 }
 
 .card a:hover {
-  color: #2a7a00;
+  background: linear-gradient(to right, #90e0ef, #38b000);
+  transform: scale(1.05);
+  color: #ffffff;
+  box-shadow: 0 4px 12px rgba(56, 176, 0, 0.3);
 }
 
 @keyframes slideUp {
   from {
     opacity: 0;
-    transform: translateY(30px);
+    transform: translateY(40px);
   }
   to {
     opacity: 1;
@@ -82,10 +123,10 @@
 
 @media (max-width: 480px) {
   .title {
-    font-size: 2rem;
+    font-size: 2.2rem;
   }
 
   .card {
-    padding: 1rem;
+    padding: 1.2rem;
   }
 }

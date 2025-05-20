@@ -26,7 +26,7 @@ const Navbar = () => {
     const handleUserActivity = () => {
       setVisible(true);
       if (timeoutId) clearTimeout(timeoutId);
-      timeoutId = setTimeout(() => setVisible(false), 2000);
+      timeoutId = setTimeout(() => setVisible(false), 50);
     };
 
     // Handle active section detection on scroll
