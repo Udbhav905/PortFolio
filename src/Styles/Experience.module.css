@@ -1,0 +1,170 @@
+.experienceSection {
+  padding: 4rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.sectionTitle {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+  color: #2d2d2d;
+  animation: fadeInUp 1s forwards;
+}
+
+.experienceContainer {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+.experienceCard {
+  background: #ffffff;
+  border-radius: 10px;
+  padding: 2rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.experienceCard:hover {
+  transform: translateY(-5px);
+}
+
+.experienceHeader {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+}
+
+.company {
+  font-size: 1.5rem;
+  color: #2d2d2d;
+  margin-bottom: 0.5rem;
+}
+
+.duration {
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.role {
+  font-size: 1.2rem;
+  color: #3a3a3a;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.description {
+  color: #4a4a4a;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.skillTag {
+  background: #e0e7ff;
+  color: #4f46e5;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+/* Skills Section */
+.skillsSection {
+  padding: 4rem 2rem;
+  background: #f8f9fa;
+}
+
+.skillsContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.skillItem {
+  margin-bottom: 2rem;
+  animation: fadeInUp 1s forwards;
+  animation-delay: 0.3s;
+}
+
+.skillInfo {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+}
+
+.skillName {
+  font-weight: 600;
+  color: #3a3a3a;
+}
+
+.skillPercent {
+  color: #4f46e5;
+  font-weight: 500;
+}
+
+.progress {
+  height: 10px;
+  background-color: #e9ecef;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.customProgressBar {
+  background-color: #4f46e5;
+  height: 100%;
+  transition: width 1.5s ease-in-out;
+  width: 0%;
+}
+
+/* Animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .skillsSection {
+    padding: 3rem 1rem;
+  }
+
+  .sectionTitle {
+    font-size: 2rem;
+  }
+
+  .experienceContainer {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (min-width: 768px) {
+  .experienceContainer {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .company {
+    font-size: 1.75rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .experienceContainer {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .experienceSection {
+    padding: 6rem 2rem;
+  }
+}

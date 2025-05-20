@@ -1,0 +1,91 @@
+.certificateSection {
+  padding: 4rem 2rem;
+  background: url('https://www.svgbackgrounds.com/wp-content/uploads/2021/05/nature-green.svg') no-repeat center center;
+  background-size: cover;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.title {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  color: #1b4332;
+  background: linear-gradient(90deg, #38b000, #90e0ef);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.grid {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.card {
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 16px;
+  padding: 1.5rem;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: slideUp 0.8s ease forwards;
+}
+
+.card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+.card h3 {
+  margin-top: 0;
+  color: #1b4332;
+}
+
+.card p {
+  color: #333;
+  margin: 0.5rem 0;
+}
+
+.card a {
+  display: inline-block;
+  margin-top: 1rem;
+  text-decoration: none;
+  color: #38b000;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.card a:hover {
+  color: #2a7a00;
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@media (max-width: 480px) {
+  .title {
+    font-size: 2rem;
+  }
+
+  .card {
+    padding: 1rem;
+  }
+}
