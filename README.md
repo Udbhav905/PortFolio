@@ -11,7 +11,7 @@ I'm **Udbhav**, a passionate **Frontend Developer** focused on building beautifu
 - 📱 Fully responsive for mobile and desktop
 - 🎨 Styled with modern CSS Modules
 - 🧩 Modular and maintainable component structure
-- 📧 Contact form integrated with EmailJS (secured with `.env`)
+- 📧 Contact form integrated with EmailJS 
 
 ---
 
@@ -21,7 +21,7 @@ I'm **Udbhav**, a passionate **Frontend Developer** focused on building beautifu
 - **CSS Modules**
 - **EmailJS**
 - **JavaScript (ES6+)**
-- **Vite** (optional, if used)
+- **Vite** 
 
 ---
 
