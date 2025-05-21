@@ -33,7 +33,7 @@ const App = () => {
   };
 
   return (
-  <>{isLoading ? <Preloader /> : <Home />}
+  <>{isLoading ? <Preloader /> :
     <div className={theme === 'dark' ? 'dark' : ''}>
       <Navbar theme={theme} toggleTheme={toggleTheme} />
 
@@ -56,7 +56,7 @@ const App = () => {
         <Contact />
       </section>
     </div>
-     </> 
+ } </> 
   );
   
 };
