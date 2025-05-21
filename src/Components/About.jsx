@@ -44,7 +44,7 @@ const About = () => {
           
           </div>
           
-          <button className={styles.ctaButton} onClick={()=>{handleDownload()}}>Download CV</button>
+          <button className={styles.ctaButton} onClick={()=>{handleDownload()}}>Download Resume</button>
            
         </div>
       </div>
