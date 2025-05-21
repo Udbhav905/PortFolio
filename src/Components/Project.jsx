@@ -19,7 +19,7 @@ const projects = [
     title: "Weather App",
     description: "React app that fetches real-time weather data using OpenWeather API.",
     image: "/weather_app.png",
-    link: ""
+    link: "https://weather-app-ecru-zeta-86.vercel.app/"
   }
 ];
 
