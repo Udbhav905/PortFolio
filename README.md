@@ -20,17 +20,3 @@ I'm **Udbhav**, a passionate **Frontend Developer** focused on building beautifu
 - **JavaScript (ES6+)**
 
 
-## 📂 Folder Structure
-
-```bash
-├── public/
-├── src/
-│   ├── components/
-│   ├── pages/
-│   ├── styles/
-│   ├── App.jsx
-│   └── index.js
-├── .env
-├── .gitignore
-├── package.json
-└── README.md
