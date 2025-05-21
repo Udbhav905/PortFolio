@@ -15,17 +15,17 @@ const App = () => {
 
     const [isLoading, setIsLoading] = useState(true);
 
-  useEffect(() => {
-    
-    window.addEventListener("load", () => {
-      setTimeout(() => {
-        setIsLoading(false);
-      }, 1000); 
-    });
+ useEffect(() => {
+  const handleLoad = () => {
+    setTimeout(() => {
+      setIsLoading(false);
+    }, 1000);
+  };
 
-   
-    return () => window.removeEventListener("load", () => {});
-  }, []);
+  window.addEventListener("load", handleLoad);
+
+  return () => window.removeEventListener("load", handleLoad);
+}, []);
   
 
   const toggleTheme = () => {
