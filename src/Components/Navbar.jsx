@@ -12,7 +12,7 @@ const Navbar = () => {
 
   const toggleMenu = () => setIsOpen(!isOpen);
 
-  // Scroll to section smoothly
+  
   const handleClick = (section) => {
     setIsOpen(false);
     const el = document.getElementById(section.toLowerCase());
@@ -22,14 +22,14 @@ const Navbar = () => {
   };
 
   useEffect(() => {
-    // Handle auto-hide/show navbar on inactivity
+    
     const handleUserActivity = () => {
       setVisible(true);
       if (timeoutId) clearTimeout(timeoutId);
       timeoutId = setTimeout(() => setVisible(false), 50);
     };
 
-    // Handle active section detection on scroll
+    
     const handleScroll = () => {
       handleUserActivity();
 
@@ -48,7 +48,7 @@ const Navbar = () => {
     window.addEventListener('scroll', handleScroll);
     window.addEventListener('mousemove', handleUserActivity);
 
-    // Initial calls
+    
     handleUserActivity();
     handleScroll();
 
@@ -62,7 +62,7 @@ const Navbar = () => {
   return (
     <div className={`${styles.Navbar} ${visible ? styles.visible : styles.hidden}`}>
       <div className={styles.logo}>
-        <img src="public/up.svg" alt="UP Logo" />
+        <img src="/up.svg" alt="UP Logo" />
       </div>
 
       <div className={styles.hamburger} onClick={toggleMenu}>
