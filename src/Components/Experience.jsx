@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from "react";
 import styles from "../Styles/Experience.module.css";
+import { useInView } from "react-intersection-observer";
+
 import AnimatedSection from "./AnimatedSection";
 
 const Experience = () => {
@@ -8,6 +10,10 @@ const Experience = () => {
   useEffect(() => {
     setAnimate(true);
   }, []);
+  const { ref: skillsRef, inView: skillsInView } = useInView({
+    threshold: 0.2,
+    triggerOnce: true,
+  });
 
   const experiences = [
     {
@@ -59,7 +65,7 @@ const Experience = () => {
             ))}
           </div>
 
-          <section className={styles.skillsSection}>
+          <section className={styles.skillsSection} ref={skillsRef}>
             <h2 className={styles.sectionTitle}>Skills</h2>
             <div className={`row ${styles.skillsContainer}`}>
               {skills.map((skill, index) => (
@@ -76,7 +82,7 @@ const Experience = () => {
                   <div className={styles.progress}>
                     <div
                       className={styles.customProgressBar}
-                      style={{ width: animate ? `${skill.level}%` : "0%" }}
+                      style={{ width: skillsInView ? `${skill.level}%` : "0%" }}
                     ></div>
                   </div>
                 </div>

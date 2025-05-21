@@ -1,50 +1,72 @@
-import React from 'react';
+// Certificates.js
+import React, { useState } from 'react';
 import styles from '../Styles/Certificates.module.css';
 import AnimatedSection from './AnimatedSection';
+import DisplayCertificate from '../Components/DisplayCertificate'; 
+
+const reactcerty = '/reactcerty.png';
+const jscerty = '/javascriptcerti.png';
+const csscerty = '/csscerty.png';
 
 const certificateData = [
   {
     title: 'React - Redux Certificate',
-    issuer: 'KG Coding (Youtube )',
+    issuer: 'KG Coding (Youtube)',
     date: 'May 2025',
-    image: "./reactcerty.png",
-    link: '',
+    image: reactcerty,
   },
   {
     title: 'JavaScript Certificate',
     issuer: 'OneRoadMap',
     date: 'May 2025',
-    image: "./javascriptcerti.png",
-    link: '',
+    image: jscerty,
   },
   {
     title: 'CSS Certificate',
     issuer: 'OneRoadMap',
     date: 'May 2025',
-    image: "./csscerty.png",
-    link: '',
+    image: csscerty,
   },
 ];
 
 const Certificates = () => {
+  const [selectedCert, setSelectedCert] = useState(null);
+
+  const handleClick = (cert) => {
+    console.log("Hiiiii"); // This will log to the console
+    setSelectedCert(cert); // Set the selected certificate
+  };
+
   return (
-    <AnimatedSection>
-    <section className={styles.certificateSection} id="certificates">
-      <h2 className={styles.title}>Certificates</h2>
-      <div className={styles.grid}>
-        {certificateData.map((cert, index) => (
-          <div className={styles.card} key={index}>
-            <h3>{cert.title}</h3>
-            <p><strong>Issuer:</strong> {cert.issuer}</p>
-            <p><strong>Date:</strong> {cert.date}</p>
-            <a  target="_blank" rel="noopener noreferrer" onClick={()=>{}}>
-              View Certificate
-            </a>
+    <>
+      <AnimatedSection>
+        <section className={styles.certificateSection} id="certificates">
+          <h2 className={styles.title}>Certificates</h2>
+          <div className={styles.grid}>
+            {certificateData.map((cert, index) => (
+              <div className={styles.card} key={index}>
+                <h3>{cert.title}</h3>
+                <p><strong>Issuer:</strong> {cert.issuer}</p>
+                <p><strong>Date:</strong> {cert.date}</p>
+                <button
+                  className={styles.viewButton}
+                  onClick={() => handleClick(cert)} // Correctly set the selected certificate
+                >
+                  View Certificate 
+                </button>
+              </div>
+            ))}
           </div>
-        ))}
-      </div>
-    </section>
-   </AnimatedSection>
+        </section>
+      </AnimatedSection>
+
+      {selectedCert && (
+        <DisplayCertificate
+          certificate={selectedCert}
+          onClose={() => setSelectedCert(null)}
+        />
+      )}
+    </>
   );
 };
 

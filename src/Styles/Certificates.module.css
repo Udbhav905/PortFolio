@@ -1,9 +1,11 @@
+/* main certificate.css */
 .certificateSection {
   padding: 5rem 2rem;
   background: url('https://www.svgbackgrounds.com/wp-content/uploads/2021/05/nature-green.svg') no-repeat center center;
   background-size: cover;
   animation: fadeIn 1s ease-in-out;
   backdrop-filter: blur(2px);
+  z-index: 20;
 }
 
 .title {
@@ -11,9 +13,8 @@
   font-size: 2.8rem;
   margin-bottom: 3rem;
   font-weight: 800;
-  background: linear-gradient(90deg, #38b000, #60d394, #90e0ef);
+  background: linear-gradient(90deg, #ff6a00, #ee0979); /* Vibrant gradient */
   background-size: 200% auto;
-  -webkit-background-clip: text;
   color: transparent;
   animation: gradientShift 3s infinite alternate;
   letter-spacing: 1px;
@@ -37,31 +38,20 @@
 }
 
 .card {
-  background: linear-gradient(145deg, rgba(255, 255, 255, 0.96), rgba(240, 255, 240, 0.9));
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.9), rgba(240, 255, 240, 0.9));
   border-radius: 20px;
   padding: 2rem;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  transition: transform 0.4s ease, box-shadow 0.4s ease, background 0.4s ease; /* Added transition */
   animation: slideUp 0.8s ease forwards;
   position: relative;
   overflow: hidden;
 }
 
-.card::before {
-  content: '';
-  position: absolute;
-  top: -30%;
-  left: -30%;
-  width: 160%;
-  height: 160%;
-  background: radial-gradient(circle, rgba(56, 176, 0, 0.1), transparent 70%);
-  transform: rotate(45deg);
-  z-index: 0;
-}
-
 .card:hover {
-  transform: translateY(-10px) scale(1.03);
+  transform: translateY(-10px) scale(1.05); /* Slightly larger on hover */
   box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.8), rgba(240, 255, 240, 0.8)); /* Change background on hover */
 }
 
 .card h3 {
@@ -80,53 +70,18 @@
   position: relative;
 }
 
-.card a {
-  display: inline-block;
+.viewButton {
   margin-top: 1rem;
-  text-decoration: none;
-  font-weight: bold;
-  color: wheat;
-  background: linear-gradient(135deg, #6a11cb 0%, #2575fc 50%, #fd1d1d 100%);
   padding: 0.5rem 1rem;
-  border-radius: 30px;
-  transition: background 0.3s, transform 0.3s;
-  z-index: 1;
-  position: relative;
+  background-color: #ff6a00; /* Vibrant button color */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease; /* Added transition */
 }
 
-.card a:hover {
-  background: linear-gradient(to right, pink , white);
-  transform: scale(1.05);
-  color: black;
-  box-shadow: 0 4px 12px rgba(56, 176, 0, 0.3);
-}
-
-@keyframes slideUp {
-  from {
-    opacity: 0;
-    transform: translateY(40px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-@media (max-width: 480px) {
-  .title {
-    font-size: 2.2rem;
-  }
-
-  .card {
-    padding: 1.2rem;
-  }
+.viewButton:hover {
+  background-color: #ee0979; /* Change color on hover */
+  transform: scale(1.05); /* Slightly enlarge on hover */
 }
