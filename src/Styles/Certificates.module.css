@@ -85,8 +85,8 @@
   margin-top: 1rem;
   text-decoration: none;
   font-weight: bold;
-  color: #2d6a4f;
-  background: linear-gradient(to right, #38b000, #90e0ef);
+  color: wheat;
+  background: linear-gradient(135deg, #6a11cb 0%, #2575fc 50%, #fd1d1d 100%);
   padding: 0.5rem 1rem;
   border-radius: 30px;
   transition: background 0.3s, transform 0.3s;
@@ -95,9 +95,9 @@
 }
 
 .card a:hover {
-  background: linear-gradient(to right, #90e0ef, #38b000);
+  background: linear-gradient(to right, pink , white);
   transform: scale(1.05);
-  color: #ffffff;
+  color: black;
   box-shadow: 0 4px 12px rgba(56, 176, 0, 0.3);
 }
 

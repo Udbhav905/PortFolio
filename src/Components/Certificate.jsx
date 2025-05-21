@@ -8,21 +8,21 @@ const certificateData = [
     issuer: 'KG Coding (Youtube )',
     date: 'May 2025',
     image: "./reactcerty.png",
-    link: 'https://example.com/certificate1',
+    link: '',
   },
   {
     title: 'JavaScript Certificate',
     issuer: 'OneRoadMap',
     date: 'May 2025',
     image: "./javascriptcerti.png",
-    link: 'https://example.com/certificate2',
+    link: '',
   },
   {
     title: 'CSS Certificate',
     issuer: 'OneRoadMap',
     date: 'May 2025',
     image: "./csscerty.png",
-    link: 'https://example.com/certificate3',
+    link: '',
   },
 ];
 
@@ -37,7 +37,7 @@ const Certificates = () => {
             <h3>{cert.title}</h3>
             <p><strong>Issuer:</strong> {cert.issuer}</p>
             <p><strong>Date:</strong> {cert.date}</p>
-            <a href={cert.link} target="_blank" rel="noopener noreferrer" onClick={()=>{}}>
+            <a  target="_blank" rel="noopener noreferrer" onClick={()=>{}}>
               View Certificate
             </a>
           </div>

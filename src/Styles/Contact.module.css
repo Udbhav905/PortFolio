@@ -72,8 +72,8 @@ textarea {
 }
 
 button {
-  background: linear-gradient(90deg, #38b000, #60d394);
-  color: white;
+    color: wheat;
+background: linear-gradient(to right, #00f2fe 0%, #4facfe 50%, #ff00ff 100%);
   font-weight: 700;
   border: none;
   border-radius: 12px;
