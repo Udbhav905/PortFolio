@@ -15,18 +15,13 @@ const App = () => {
 
     const [isLoading, setIsLoading] = useState(true);
 
- useEffect(() => {
-  const handleLoad = () => {
-    setTimeout(() => {
-      setIsLoading(false);
-    }, 1000);
-  };
+useEffect(() => {
+  const timer = setTimeout(() => {
+    setIsLoading(false);
+  }, 1000); 
 
-  window.addEventListener("load", handleLoad);
-
-  return () => window.removeEventListener("load", handleLoad);
+  return () => clearTimeout(timer);
 }, []);
-  
 
   const toggleTheme = () => {
     setTheme((curr) => (curr === 'light' ? 'dark' : 'light'));
