@@ -6,6 +6,7 @@ import Experience from './Components/Experience'
 import Projects from './Components/Project'
 import Certificates from './Components/Certificate'
 import Contact from './Components/Contact'
+import Preloader from './Components/Preloader'
 
 const App = () => {
   const [theme, setTheme] = useState(() => {
@@ -32,7 +33,7 @@ const App = () => {
   };
 
   return (
-  <>{isLoading ? <Loader /> : <Home />}
+  <>{isLoading ? <Preloader /> : <Home />}
     <div className={theme === 'dark' ? 'dark' : ''}>
       <Navbar theme={theme} toggleTheme={toggleTheme} />
 
