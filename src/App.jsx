@@ -12,23 +12,27 @@ const App = () => {
     return localStorage.getItem('theme') || 'light';
   });
 
-  // Save theme preference in localStorage
-  useEffect(() => {
-    localStorage.setItem('theme', theme);
+    const [isLoading, setIsLoading] = useState(true);
 
-    // Optional: Apply class to body for global styles if needed
-    if (theme === 'dark') {
-      document.body.classList.add('dark');
-    } else {
-      document.body.classList.remove('dark');
-    }
-  }, [theme]);
+  useEffect(() => {
+    
+    window.addEventListener("load", () => {
+      setTimeout(() => {
+        setIsLoading(false);
+      }, 1000); 
+    });
+
+   
+    return () => window.removeEventListener("load", () => {});
+  }, []);
+  
 
   const toggleTheme = () => {
     setTheme((curr) => (curr === 'light' ? 'dark' : 'light'));
   };
 
   return (
+  <>{isLoading ? <Loader /> : <Home />}
     <div className={theme === 'dark' ? 'dark' : ''}>
       <Navbar theme={theme} toggleTheme={toggleTheme} />
 
@@ -51,10 +55,11 @@ const App = () => {
         <Contact />
       </section>
     </div>
+     </> 
   );
   
 };
-  
+
 
 
 export default App

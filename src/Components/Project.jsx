@@ -13,13 +13,13 @@ const projects = [
     title: "Portfolio Website",
     description: "A personal portfolio built with React and CSS Modules to showcase my skills and projects.",
     image: "/Portfolio_img.png",
-    link: "https://your-portfolio-link.com"
+    link: "https://port-folio-five-amber.vercel.app/"
   },
   {
     title: "Weather App",
     description: "React app that fetches real-time weather data using OpenWeather API.",
     image: "/weather_app.png",
-    link: "https://your-weather-link.com"
+    link: ""
   }
 ];
 
