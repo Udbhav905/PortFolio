@@ -1,4 +1,4 @@
-// Certificates.js
+
 import React, { useState } from 'react';
 import styles from '../Styles/Certificates.module.css';
 import AnimatedSection from './AnimatedSection';
@@ -33,8 +33,8 @@ const Certificates = () => {
   const [selectedCert, setSelectedCert] = useState(null);
 
   const handleClick = (cert) => {
-    console.log("Hiiiii"); // This will log to the console
-    setSelectedCert(cert); // Set the selected certificate
+   
+    setSelectedCert(cert); 
   };
 
   return (
@@ -50,7 +50,7 @@ const Certificates = () => {
                 <p><strong>Date:</strong> {cert.date}</p>
                 <button
                   className={styles.viewButton}
-                  onClick={() => handleClick(cert)} // Correctly set the selected certificate
+                  onClick={() => handleClick(cert)} 
                 >
                   View Certificate 
                 </button>

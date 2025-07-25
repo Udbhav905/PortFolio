@@ -55,7 +55,7 @@
 .sectionTitle::after {
   content: '';
   display: block;
-  width: 80px;
+  width: 100%;
   height: 4px;
   background: #00b4d8;
   border-radius: 2px;

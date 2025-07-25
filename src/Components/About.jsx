@@ -5,8 +5,8 @@ import AnimatedSection from "./AnimatedSection";
 const About = () => {
   const handleDownload = () => {
     const link = document.createElement("a");
-    link.href = "/UdbhavResumeNew.pdf";
-    link.download = "/UdbhavResumeNew.pdf";
+    link.href = "/public/MyResume.pdf";
+    link.download = "Udbhav_WebDev.pdf";
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
@@ -47,6 +47,10 @@ const About = () => {
               <div className={styles.detailItem}>
                 <h3>Expertise:</h3>
                 <p>Frontend Development</p>
+              </div>
+              <div className={styles.detailItem}>
+                <h3>GitHub:</h3>
+                <p >GitHub Profile :<a href="https://github.com/Udbhav905">Udbhav Prajapati</a></p>
               </div>
             </div>
 
