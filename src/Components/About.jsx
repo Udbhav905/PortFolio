@@ -5,7 +5,7 @@ import AnimatedSection from "./AnimatedSection";
 const About = () => {
   const handleDownload = () => {
     const link = document.createElement("a");
-    link.href = "/public/MyResume.pdf";
+    link.href = "/Udbhav_WebDev.pdf";
     link.download = "Udbhav_WebDev.pdf";
     document.body.appendChild(link);
     link.click();
