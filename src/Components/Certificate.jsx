@@ -5,8 +5,8 @@ import AnimatedSection from './AnimatedSection';
 import DisplayCertificate from '../Components/DisplayCertificate'; 
 
 const reactcerty = '/reactcerty.png';
-const fullstack = '/fullstack.jpg';
-const goggle = '/csscerty.png';
+const fullstack = '/fullstackdev.jpg';
+const goggle = '/goggledsa.png';
 
 const certificateData = [
    {
