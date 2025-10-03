@@ -110,6 +110,9 @@
   transform: translateY(-3px);
   box-shadow: 0 10px 25px rgba(2, 62, 138, 0.4);
 }
+a{
+  color: black;
+}
 
 /* Responsive adjustments */
 @media (max-width: 992px) {
@@ -147,9 +150,18 @@
 
   .aboutText {
     font-size: 1.05rem;
+    text-align: start;
   }
 
   .ctaButton {
     width: 100%;
+  }
+  .detailItem{
+    display: flex;
+    flex-direction: column;
+  }
+  .detailItem p{
+    display: flex;
+    flex-direction: column;
   }
 }

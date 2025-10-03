@@ -5,8 +5,8 @@ import AnimatedSection from "./AnimatedSection";
 const About = () => {
   const handleDownload = () => {
     const link = document.createElement("a");
-    link.href = "/Udbhav_WebDev.pdf";
-    link.download = "Udbhav_WebDev.pdf";
+    link.href = "/Udbhav_FD.pdf";
+    link.download = "Udbhav_FrontEndDev.pdf";
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);

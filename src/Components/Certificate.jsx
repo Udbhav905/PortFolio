@@ -5,10 +5,16 @@ import AnimatedSection from './AnimatedSection';
 import DisplayCertificate from '../Components/DisplayCertificate'; 
 
 const reactcerty = '/reactcerty.png';
-const jscerty = '/javascriptcerti.png';
-const csscerty = '/csscerty.png';
+const fullstack = '/fullstack.jpg';
+const goggle = '/csscerty.png';
 
 const certificateData = [
+   {
+    title: 'Fullstack Certificate',
+    issuer: 'OneRoadMap',
+    date: 'May 2025',
+    image: fullstack,
+  },
   {
     title: 'React - Redux Certificate',
     issuer: 'KG Coding (Youtube)',
@@ -16,16 +22,10 @@ const certificateData = [
     image: reactcerty,
   },
   {
-    title: 'JavaScript Certificate',
-    issuer: 'OneRoadMap',
-    date: 'May 2025',
-    image: jscerty,
-  },
-  {
-    title: 'CSS Certificate',
-    issuer: 'OneRoadMap',
-    date: 'May 2025',
-    image: csscerty,
+    title: 'DSA Problem Solving',
+    issuer: 'Goggle',
+    date: 'Sep 2025',
+    image: goggle,
   },
 ];
 

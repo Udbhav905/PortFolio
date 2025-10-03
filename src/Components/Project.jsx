@@ -10,17 +10,11 @@ const projects = [
     link: "https://web-foodies.vercel.app/"
   },
   {
-    title: "Portfolio Website",
+    title: "Movie Booking FrontEnd",
     description: "A personal portfolio built with React and CSS Modules to showcase my skills and projects.",
-    image: "/Portfolio_img.png",
-    link: "https://port-folio-five-amber.vercel.app/"
+    image: "/Movie.png",
+    link: "https://movie-booking-ruby.vercel.app/"
   },
-  {
-    title: "Weather App",
-    description: "React app that fetches real-time weather data using OpenWeather API.",
-    image: "/weather_app.png",
-    link: "https://weather-app-ecru-zeta-86.vercel.app/"
-  }
 ];
 
 const Projects = () => {

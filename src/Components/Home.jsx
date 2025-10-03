@@ -4,9 +4,9 @@ import AnimatedSection from './AnimatedSection';
 
 const roles = [
   "FrontEnd Developer",
-  "HTML Developer",
-  "JavaScript Developer",
   "React Developer",
+  "MERN STACK Developer",
+  "JavaScript Developer",
   "Web Developer"
 ];
 
