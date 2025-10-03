@@ -6,7 +6,7 @@ import DisplayCertificate from '../Components/DisplayCertificate';
 
 const reactcerty = '/reactcerty.png';
 const fullstack = '/fullstackdev.jpg';
-const goggle = '/goggledsa.png';
+const goggle = '/goggledsa.jpg';
 
 const certificateData = [
    {
